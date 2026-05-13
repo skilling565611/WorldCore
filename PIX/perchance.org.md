@@ -1,5 +1,13 @@
 # New Character Setup
 
+## WorldCore PIX File Handling
+
+PIX/Pix.dev is a local-only phone-linked development file. It changes often and must not be committed.
+
+PIX .dev files with "Control Prime" in the filename are transfer bridge files for copying or moving to Control Prime. These files should normally stay out of GitHub unless JacobS / Dev specifically says they are safe to commit.
+
+Keep this PIX folder available for tracked documentation such as perchance.org.md. Do not ignore the whole PIX folder.
+
 ## Basic Character Info
 
 ### Character Name
