@@ -9,5 +9,7 @@ env/
 Data/world_state.json
 Data/world_state_backup.json
 
+PIX/Pix.dev
+
 .DS_Store
 Thumbs.db
