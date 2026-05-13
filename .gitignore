@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+
+Data/world_state.json
+Data/world_state_backup.json
+
+.DS_Store
+Thumbs.db
