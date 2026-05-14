@@ -286,3 +286,41 @@ Keep:
 Mark unfinished links as [AI_FILL_LATER].
 Do not push unless explicitly told.
 Return changed-files report only.
+Small cleanup only for AI/Characters/Vixella_Rosepaw.npc.
+
+Do not rewrite the character.
+Do not delete content.
+Do not change Perchance fields.
+Do not change Custom JavaScript.
+Do not push.
+
+Only rename the music asset system to sound asset system:
+
+Change:
+[Music_Asset_System]
+to:
+[Sound_Asset_System]
+
+Change wording from music/audio to sound/audio where appropriate.
+
+Change:
+[Music_Categories]
+to:
+[Sound_Categories]
+
+Change:
+[Music_Slots]
+to:
+[Sound_Slots]
+
+Change paths:
+AI/Characters/Music_Prompts/Vixella_Rosepaw/
+to:
+AI/Characters/Sound_Prompts/Vixella_Rosepaw/
+
+If any finished audio path is added or referenced, use:
+AI/Characters/Sound/Vixella_Rosepaw/
+
+Keep SUNO references because SUNO is still one sound source.
+
+Return final report and changed files list only.
