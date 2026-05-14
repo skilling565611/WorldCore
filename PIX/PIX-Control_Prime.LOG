@@ -1,0 +1,96 @@
+IMPORTANT: Split traffic mode is active. Do not push to GitHub or perform remote publish actions. Only make local changes and provide a diff/report unless explicitly told to push.
+[Control Prime PIX Log]
+
+Status:
+PIX.dev was causing trouble, so the Control Prime version is being moved into a .LOG tracking file.
+
+File Purpose:
+This file tracks Control Prime PIX setup notes, transfer notes, repo status, and safe workflow details.
+
+Device:
+Control Prime
+
+Related Device:
+Arctic Prime
+
+Related Storage:
+Z: drive
+Ford Link D:
+
+Current Notes:
+- Control Prime is the main project machine.
+- Control Prime is the primary KeePassXC vault source.
+- Arctic Prime is the secondary/synced device.
+- Ford Link D: is used as backup/transfer storage.
+- KeeShare/merge works when network is available.
+- If network/IP is unreliable, use manual merge or cloud bridge workflow.
+
+PIX.dev Issue:
+The regular PIX.dev file is being avoided for now due to setup/transfer trouble.
+
+Replacement:
+PIX-Control_Prime.LOG
+
+Security Rules:
+- Do not store passwords in this file.
+- Do not store KeePassXC vault files in GitHub.
+- Do not store recovery codes, 2FA backup codes, sync/share codes, or tokens.
+- Store real secrets only inside KeePassXC.
+
+Next Steps:
+- Keep this file as a safe status log.
+- Move only safe setup notes into WorldCore.
+- Use KeePassXC for private credentials.
+- Use Control Prime as the main source when syncing/merging.
+
+Single Traffic File Rule:
+- Keep everything traffic/session-related inside this file for now.
+- Do not split PIX traffic into multiple files yet.
+- Do not push to GitHub without explicit permission.
+- Control Prime is the monitoring/work side.
+
+PIX Device Flow:
+Phone:
+The phone is the first-catch device and live monitor for PIX transfer files. If a file is being transferred, the phone usually sees it first and is used to check whether the transfer is stuck.
+
+Arctic Prime:
+Arctic Prime is the lightweight control hub. It receives PIX files from the phone and can prepare or forward instructions to Control Prime.
+
+Control Prime:
+Control Prime is the heavier work machine. PIX files with "Control Prime" in the filename are transfer bridge files intended to move instructions or notes toward Control Prime.
+
+Sync Behavior:
+PIX transfer files may get stuck if a file is open, partially synced, renamed too quickly, or held by the phone/PC sync system. If stuck, copy the content, delete or rename the stuck file, then recreate it with a retry name.
+
+Stable Information:
+Transfer files are temporary courier files. Stable project information should be moved into README.md, Docs/, or PIX/perchance.org.md.
+
+[RS File Manager Transfer Note]
+
+Current transfer tool:
+RS File Manager
+
+Role:
+Used for file transfers between phone, Control Prime, Arctic Prime, and backup/transfer locations.
+
+Current network note:
+Phone may be acting as internet/network bridge, so restarting the phone can interrupt transfers and may change IP/network paths.
+
+Rules:
+- Use RS File Manager for safe project files, logs, screenshots, and documentation.
+- Do not transfer KeePassXC vault files into GitHub repo folders.
+- Do not transfer passwords, recovery codes, 2FA backup codes, sync/share codes, or tokens into WorldCore.
+- Keep real secrets inside KeePassXC only.
+- If transfer paths break, check whether the phone restarted, tethering changed, or the device IP changed.
+
+[Arctic Prime SMB Login Note]
+
+Username:
+Dev(PIX)
+
+Password Status:
+Temporary and should be replaced later.
+
+Security Rule:
+Do not store the actual password in WorldCore, GitHub, logs, screenshots, or chat.
+Store the final password only in KeePassXC.

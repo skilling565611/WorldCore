@@ -19,3 +19,27 @@ PIX/*ArcticPrime*.dev
 
 .DS_Store
 Thumbs.db
+
+# Private security files and local secrets
+*.kdbx
+*.key
+*.keyx
+*.kbdx
+KeePassXC/
+Vaults/
+Passwords/
+Secrets/
+RecoveryCodes/
+Tokens/
+Credentials/
+Private/
+.env
+.env.*
+*.secret
+*.secrets
+*.token
+*.tokens
+*.bak
+*.backup
+*.tmp
+desktop.ini
