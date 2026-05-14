@@ -406,5 +406,20 @@ SUNO_Generated_01 = AI/Characters/Music/Vixella_Rosepaw/SUNO_Generated_01.mp3
 SUNO_Generated_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/SUNO_Generated_Prompt_01.txt
 Chat_Background_Music_Audio_URL = [AI_FILL_LATER]
 ======================================================================
+[Sound_Asset_System]
 
+[Purpose]
+This section tracks sound/audio assets for Vixella Rosepaw.
 
+[Sound_Slots]
+Theme_Song_01 = [AI_FILL_LATER]
+Background_Loop_01 = [AI_FILL_LATER]
+Comfort_Theme_01 = [AI_FILL_LATER]
+Playful_Theme_01 = [AI_FILL_LATER]
+Focus_Theme_01 = [AI_FILL_LATER]
+SUNO_Generated_01 = [AI_FILL_LATER]
+
+[Rule]
+Sound files may include music, voice clips, ambient loops, UI sounds, character themes, SFX, and SUNO songs.
+Codex can organize and expand this section later.
+======================================================================
