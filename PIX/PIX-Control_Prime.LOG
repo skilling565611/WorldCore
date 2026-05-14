@@ -1,0 +1,19 @@
+Dark mode polish only.
+
+The KeepPass Helper GUI is working. Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
+
+Only update the tkinter styling:
+- dark background
+- dark panels
+- light text
+- readable entry fields
+- readable buttons
+- yellow/gold warning bar
+- blue status bar
+- keep the same layout
+- keep tkinter only
+- no external dependencies
+- keep Dev 1 -> Dev 2 -> Dev 3 comments
+- do not push
+
+Provide final report and changed files list only.

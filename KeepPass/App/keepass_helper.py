@@ -12,6 +12,7 @@ import shutil
 import subprocess
 from datetime import datetime
 from pathlib import Path
+
 try:
     import tkinter as tk
     from tkinter import filedialog, messagebox, ttk
@@ -59,23 +60,48 @@ class KeepPassHelperApp:
         self.status_text = tk.StringVar(value="Ready. This app never asks for passwords.")
         self.root_text = tk.StringVar(value=self._root_status_text())
 
+        self._setup_style()
         self._build_ui()
 
+    def _setup_style(self) -> None:
+        # Dev 1 -> Dev 2 -> Dev 3:
+        # KeepPass helper styling area.
+        self.colors = {
+            "bg": "#edf4fb",
+            "panel": "#f8fbff",
+            "warning": "#fff4d6",
+            "status": "#e8f0fe",
+            "text": "#1f2937",
+        }
+
+        self.root.configure(bg=self.colors["bg"])
+
+        style = ttk.Style()
+        style.theme_use("clam")
+        style.configure("TFrame", background=self.colors["bg"])
+        style.configure("Panel.TFrame", background=self.colors["panel"])
+        style.configure("TLabel", background=self.colors["bg"], foreground=self.colors["text"], font=("Segoe UI", 10))
+        style.configure("Title.TLabel", background=self.colors["bg"], foreground=self.colors["text"], font=("Segoe UI", 17, "bold"))
+        style.configure("Section.TLabel", background=self.colors["bg"], foreground=self.colors["text"], font=("Segoe UI", 11, "bold"))
+        style.configure("Warning.TLabel", background=self.colors["warning"], foreground=self.colors["text"], font=("Segoe UI", 10, "bold"), padding=6)
+        style.configure("TButton", padding=6)
+        style.configure("Status.TLabel", background=self.colors["status"], foreground=self.colors["text"], padding=6)
+
     def _build_ui(self) -> None:
-        wrapper = ttk.Frame(self.root, padding=16)
+        wrapper = ttk.Frame(self.root, padding=16, style="TFrame")
         wrapper.grid(row=0, column=0, sticky="nsew")
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
         wrapper.columnconfigure(1, weight=1)
 
-        title = ttk.Label(wrapper, text=APP_TITLE, font=("Segoe UI", 16, "bold"))
+        title = ttk.Label(wrapper, text=APP_TITLE, style="Title.TLabel")
         title.grid(row=0, column=0, columnspan=3, sticky="w")
 
         warning = (
             "File workflow helper only. Not a password manager. "
             "Does not read, decrypt, display, or store vault contents or passwords."
         )
-        ttk.Label(wrapper, text=warning, wraplength=760).grid(
+        ttk.Label(wrapper, text=warning, wraplength=760, style="Warning.TLabel").grid(
             row=1, column=0, columnspan=3, sticky="ew", pady=(4, 14)
         )
 
@@ -83,13 +109,21 @@ class KeepPassHelperApp:
             row=2, column=0, columnspan=3, sticky="ew", pady=(0, 12)
         )
 
-        self._add_path_row(wrapper, 3, "Local vault path", self.local_vault_path, self._browse_vault)
-        self._add_path_row(wrapper, 4, "Backup folder", self.backup_folder, self._browse_backup)
-        self._add_path_row(wrapper, 5, "Bridge folder", self.bridge_folder, self._browse_bridge)
-        self._add_path_row(wrapper, 6, "Log file", self.log_file, self._browse_log)
+        ttk.Label(wrapper, text="Paths", style="Section.TLabel").grid(
+            row=3, column=0, columnspan=3, sticky="w", pady=(0, 4)
+        )
+
+        self._add_path_row(wrapper, 4, "Local vault path", self.local_vault_path, self._browse_vault)
+        self._add_path_row(wrapper, 5, "Backup folder", self.backup_folder, self._browse_backup)
+        self._add_path_row(wrapper, 6, "Bridge folder", self.bridge_folder, self._browse_bridge)
+        self._add_path_row(wrapper, 7, "Log file", self.log_file, self._browse_log)
+
+        ttk.Label(wrapper, text="Actions", style="Section.TLabel").grid(
+            row=8, column=0, columnspan=3, sticky="w", pady=(14, 4)
+        )
 
         buttons = ttk.Frame(wrapper)
-        buttons.grid(row=7, column=0, columnspan=3, sticky="ew", pady=(16, 8))
+        buttons.grid(row=9, column=0, columnspan=3, sticky="ew", pady=(0, 8))
         for index in range(3):
             buttons.columnconfigure(index, weight=1)
 
@@ -122,19 +156,29 @@ class KeepPassHelperApp:
             "If both devices were edited, back up both vaults before merging."
         )
         ttk.Label(wrapper, text=notes, wraplength=760).grid(
-            row=8, column=0, columnspan=3, sticky="ew", pady=(8, 8)
+            row=10, column=0, columnspan=3, sticky="ew", pady=(8, 8)
         )
 
-        ttk.Label(wrapper, text="System Status").grid(row=9, column=0, sticky="w", pady=(4, 2))
-        self.system_status = tk.Text(wrapper, height=7, wrap="word")
-        self.system_status.grid(row=10, column=0, columnspan=3, sticky="nsew", pady=(0, 8))
-        wrapper.rowconfigure(10, weight=1)
+        ttk.Label(wrapper, text="System Status", style="Section.TLabel").grid(
+            row=11, column=0, sticky="w", pady=(4, 2)
+        )
+        self.system_status = tk.Text(
+            wrapper,
+            height=7,
+            wrap="word",
+            bg=self.colors["panel"],
+            fg=self.colors["text"],
+            relief="solid",
+            borderwidth=1,
+        )
+        self.system_status.grid(row=12, column=0, columnspan=3, sticky="nsew", pady=(0, 8))
+        wrapper.rowconfigure(12, weight=1)
         self._set_system_status(
             "Click Check WorldCore System to verify Docs, Commands, PIX logs, and KeepPass logs."
         )
 
-        status = ttk.Label(wrapper, textvariable=self.status_text, relief="sunken", anchor="w", padding=6)
-        status.grid(row=11, column=0, columnspan=3, sticky="ew", pady=(8, 0))
+        status = ttk.Label(wrapper, textvariable=self.status_text, relief="sunken", anchor="w", style="Status.TLabel")
+        status.grid(row=13, column=0, columnspan=3, sticky="ew", pady=(8, 0))
 
     def _add_path_row(
         self,
@@ -443,7 +487,7 @@ class KeepPassHelperApp:
 
 def main() -> None:
     root = tk.Tk()
-    app = KeepPassHelperApp(root)
+    KeepPassHelperApp(root)
     root.mainloop()
 
 

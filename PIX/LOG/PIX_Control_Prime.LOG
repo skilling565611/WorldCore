@@ -23,3 +23,4 @@ Requirements area created.
 `.venv` must not be pushed.
 KeepPass Helper still uses Tkinter.
 Tkinter must come from the Python install, not pip.
+OneDrive bridge test active. Arctic Prime is currently holding the working copy. Ford Link D: is being used as transfer/bridge storage and may sync selected safe files to OneDrive for Control Prime testing. Do not place secrets, passwords, recovery codes, tokens, or KeePass vault contents in OneDrive unless explicitly approved.
