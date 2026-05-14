@@ -16,6 +16,12 @@ You must read the disclaimer and license before using, copying, modifying, or re
 - Main branch: Dev
 - Development status: active personal development
 
+## Custom File Types
+
+WorldCore uses DevF6rge-style structured file concepts for some development, config, command, profile, and worldbuilding files.
+
+See [Docs/Custom_File_Types.md](Docs/Custom_File_Types.md) for the current WorldCore file type notes.
+
 ## Important Note
 
 Some WorldCore systems are fictional simulations only. This includes fake camera concepts, zones, access levels, WorldCore command systems, AI character tools, and other roleplay or world-structure data.

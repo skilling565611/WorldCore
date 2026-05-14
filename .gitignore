@@ -13,6 +13,9 @@ PIX/Pix.dev
 PIX/*Control Prime*.dev
 PIX/*control_prime*.dev
 PIX/*ControlPrime*.dev
+PIX/*Arctic Prime*.dev
+PIX/*arctic_prime*.dev
+PIX/*ArcticPrime*.dev
 
 .DS_Store
 Thumbs.db
