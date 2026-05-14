@@ -1,3 +1,37 @@
+Organize existing WorldCore character/audio data only.
+
+Everything needed is already in place.
+Do not invent new systems.
+Do not delete real content.
+Do not rewrite character personality.
+Do not change Custom JavaScript behavior.
+Do not push unless explicitly told.
+
+Main job:
+Put the existing pieces into the correct order like a puzzle.
+
+Organize:
+- Vixella_Rosepaw.npc
+- character fields
+- image links
+- sound/audio links
+- SUNO prompt
+- sound asset system
+- image asset system
+- character status system
+- raw notes
+- safety rules
+
+Rules:
+- Keep one main .npc character file.
+- Keep sound/audio references in the character file.
+- Put detailed sound info in the sound area/file.
+- Rename Music_Asset_System to Sound_Asset_System if needed.
+- Mark unfinished items as [AI_FILL_LATER].
+- Remove duplicated helper chatter.
+- Keep all useful content.
+
+Return final report and changed files list only.
 Dark mode polish only.
 
 The KeepPass Helper GUI is working. Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
