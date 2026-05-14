@@ -81,3 +81,120 @@ Run from WorldCore root:
 cd D:\WorldCore
 python -m tkinter
 python KeepPass\App\keepass_helper.py
+Create the AI character area for WorldCore.
+
+Repo:
+skilling565611/WorldCore
+
+Branch:
+Dev
+
+Create these paths:
+
+AI/Characters/Character_Index.txt
+AI/Characters/Character_Template.txt
+AI/Characters/Character_Files/.keep
+
+Do not modify existing files.
+Do not delete anything.
+Do not add secrets.
+Do not add vault files.
+Do not push unless explicitly told.
+
+Character_Index.txt content:
+
+[Character_Index]
+
+[Folder]
+Root = AI/Characters/
+Character_Files = AI/Characters/Character_Files/
+
+[Characters]
+Total = 0
+
+[Character_List]
+
+
+Character_Template.txt content:
+
+[Character_Template]
+
+[Basic_Info]
+Character_Name =
+Character_Alias =
+Character_Type =
+Character_Status =
+Character_Version =
+Created_For =
+Platform = Perchance AI Character Chat
+Compatibility_Level = Experimental
+
+[Core_Profile]
+Role =
+Purpose =
+Short_Description =
+Long_Description =
+Personality =
+Speech_Style =
+Behavior_Style =
+Relationship_To_User =
+
+[Appearance]
+General_Appearance =
+Body_Type =
+Clothing =
+Accessories =
+Notable_Features =
+Optional_Image_Prompt =
+
+[Backstory]
+Origin =
+History =
+Important_Events =
+Current_Goals =
+Secrets =
+Conflicts =
+
+[Behavior]
+Default_Behavior =
+User_Interaction_Style =
+Emotional_Range =
+Loyalty_Level =
+Obedience_Level =
+Independence_Level =
+Memory_Use =
+Decision_Style =
+
+[Rules]
+Always_Do =
+Never_Do =
+Ask_Before =
+Stay_In_Character =
+Break_Character_Allowed = false
+
+[NSFW_Settings]
+NSFW_Enabled =
+Adult_Themes =
+Mature_Relationships =
+Kink_Tags =
+Content_Boundaries =
+Compatibility_Warnings =
+Notes =
+
+[Driver_Link]
+Driver_File =
+Notes_File =
+
+[Extra]
+Raw_Details =
+Future_Additions =
+Developer_Notes =
+
+Character_Files/.keep content:
+
+This folder stores individual character file sets.
+
+Each character may use:
+- CharacterName_Core.txt
+- CharacterName_Driver.txt
+- CharacterName_Notes.txt

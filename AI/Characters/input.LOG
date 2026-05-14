@@ -1,0 +1,23 @@
+[WorldCore_Character_Input_LOG]
+======================================================================
+[Purpose]
+This file stores raw character details before they are organized into a final character file.
+======================================================================
+[Use]
+Paste messy character notes here.
+The assistant will convert this into a clean character profile.
+======================================================================
+[Rules]
+Do not add passwords.
+Do not add tokens.
+Do not add recovery codes.
+Do not add private credentials.
+Do not add KeePass vault contents.
+======================================================================
+[Current_Target]
+Character_Name = Vixella Rosepaw
+Output_File = AI/Characters/Vixella_Rosepaw.npc
+======================================================================
+[Raw_Input]
+======================================================================
+Create a playful emotional pop song inspired by Vixella Rosepaw, an orange-and-white anthro fox girl with big ears, fluffy tail, long brown hair, pink bows, and cozy pastel bedroom energy. The song should feel cute, warm, dreamy, and slightly mischievous, like a fox girl greeting her favorite person in a neon-pink room full of plushies, soft lights, and harmless chaos. Style should blend upbeat electropop, kawaii pop, soft synthwave, and cozy internet-core. Use bright melodies, glittery synths, gentle bass, soft drums, and a catchy chorus. The mood should be warm, playful, affectionate, expressive, and emotionally comforting. Lyrics should focus on friendship, playful teasing, feeling safe, cozy late-night chats, creative energy, and Vixella always being ready to cheer {{user}} up. Keep it clean, cute, and character-driven. Avoid dark sadness; even emotional moments should feel hopeful. The chorus should be catchy and memorable, with fox imagery like ears perking, tail swishing, pink glow, soft paws, and a little spark of chaos. Female vocal, sweet expressive voice, playful tone, dreamy layered harmonies, polished anime-pop feeling.

@@ -13,6 +13,13 @@
 💭 User reminder note. In case you get the AI to write on your behalf, this is the reminder note used in that case.
 =(optional) e.g. "Responses should be short and creative. Always stay in character."
 =🔤 Default message style (color, font, size, etc.). E.g. try adding color:blue; font-size:90%;, and read this to learn other options - it's very customizable - message bubble background color/image, glowing text, etc. You can start with a preset, and then ask an AI to tweak it for you. Click button for presets 👉 💡 show examples
+color: #4aa3ff;
+font-family: Consolas, Courier New, monospace;
+font-size: 90%;
+background-color: rgba(20, 24, 38, 0.85);
+border-radius: 6px;
+padding: 6px 8px;
+text-shadow: 0 0 6px rgba(74, 163, 255, 0.45);
 =🖼️ Chat background image/video URL. Use perchance.org/upload to upload your images/videos. URL should end in .jpg or .webp or .webm or .mp4, etc. https://user.uploads.dev/file/example.jpeg/
 =🎵 Chat background music/audio URL. Use perchance.org/upload to upload your audio. The URL should generally end in .mp3 or .webm or .mp4 or .ogg, etc. ℹ️ https://user.uploads.dev/file/example.mp3/
 =🖼️➡️ Image generation prompt starter. This text will be automatically added to the start of all image generation requests. This text will strongly affect the style and content of the generated images. You can use Perchance syntax and text-to-image-plugin prompt syntax. ghibli style anime art, {soft|pastel} colors, 
