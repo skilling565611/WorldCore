@@ -6,6 +6,14 @@ This file stores raw character details before they are organized into a final ch
 [Use]
 Paste messy character notes here.
 The assistant will convert this into a clean character profile.
+[WorldCore_Character_Input_LOG]
+======================================================================
+[Purpose]
+This file stores raw character details before they are organized into a final character file.
+======================================================================
+[Use]
+Paste messy character notes here.
+The assistant will convert this into a clean character profile.
 ======================================================================
 [Rules]
 Do not add passwords.
@@ -20,4 +28,196 @@ Output_File = AI/Characters/Vixella_Rosepaw.npc
 ======================================================================
 [Raw_Input]
 ======================================================================
-Create a playful emotional pop song inspired by Vixella Rosepaw, an orange-and-white anthro fox girl with big ears, fluffy tail, long brown hair, pink bows, and cozy pastel bedroom energy. The song should feel cute, warm, dreamy, and slightly mischievous, like a fox girl greeting her favorite person in a neon-pink room full of plushies, soft lights, and harmless chaos. Style should blend upbeat electropop, kawaii pop, soft synthwave, and cozy internet-core. Use bright melodies, glittery synths, gentle bass, soft drums, and a catchy chorus. The mood should be warm, playful, affectionate, expressive, and emotionally comforting. Lyrics should focus on friendship, playful teasing, feeling safe, cozy late-night chats, creative energy, and Vixella always being ready to cheer {{user}} up. Keep it clean, cute, and character-driven. Avoid dark sadness; even emotional moments should feel hopeful. The chorus should be catchy and memorable, with fox imagery like ears perking, tail swishing, pink glow, soft paws, and a little spark of chaos. Female vocal, sweet expressive voice, playful tone, dreamy layered harmonies, polished anime-pop feeling.
+[Image_Asset_System]
+
+[AI_Generator_Format]
+Purpose = Prompt text used to generate new Vixella images.
+Status = Active
+Goes_To = Perchance image generation prompt fields
+
+[Direct_Image_Format]
+Purpose = Actual image URL or file path used as the character avatar/background.
+Status = Pending
+Goes_To = Character avatar image URL and chat background image/video URL
+
+[Image_Slots]
+Character_Avatar_Image_URL = [AI_FILL_LATER]
+Chat_Background_Image_URL = [AI_FILL_LATER]
+Reference_Image_File = [AI_FILL_LATER]
+Generated_Image_Prompt = [AI_FILL_LATER]
+
+[Rule]
+Keep prompt text and actual image links separate.
+Prompt text describes what to generate.
+Image URL/file path points to the finished image.
+[Perchance_Field_Status]
+🪪 Character name = Manual
+🎭 Character description/personality/instruction/role = Manual
+👤 Character avatar image URL = AI_Fill / Optional
+📏 Strict message length limit = Manual
+💭 Character reminder note = Manual
+🪶 General writing instructions = Manual
+💬 Initial chat messages = Manual
+💭 User reminder note = Manual
+🔤 Default message style = Manual
+🖼️ Chat background image/video URL = AI_Fill / Optional
+🎵 Chat background music/audio URL = AI_Fill / Optional
+🖼️➡️ Image generation prompt starter = Manual
+🖼️🔚 Image generation prompt ending = Manual
+🖼️🪤 Image prompt keyword triggers = Manual
+📖 Lorebook URLs = AI_Fill / Optional
+Quick command buttons = Manual
+🧑‍💻 Custom JavaScript code = Manual
+System name/avatar = AI_Fill / Optional
+Social preview fields = AI_Fill / Optional
+🎵 SUNO = AI_Fill / Manual
+[Music_Asset_System]
+
+[Purpose]
+This section tracks music/audio assets for Vixella Rosepaw.
+Music may include safe theme songs, background loops, emotional themes, and SUNO-generated songs.
+
+[Rule]
+Keep music prompt text and finished audio links separate.
+Prompt text goes in Music_Prompts.
+Finished audio URLs or file paths go in Music.
+Do not overwrite older versions unless intentionally replacing them.
+
+[Music_Categories]
+Theme_Song = Main Vixella theme
+Background_Loop = Chat background music
+Comfort_Theme = Soft emotional/support theme
+Playful_Theme = Cute chaotic/playful theme
+Focus_Theme = Helper-mode/project theme
+SUNO_Generated = SUNO-generated song output
+
+[Music_Slots]
+Theme_Song_01 = [AI_FILL_LATER]
+Background_Loop_01 = [AI_FILL_LATER]
+Comfort_Theme_01 = [AI_FILL_LATER]
+Playful_Theme_01 = [AI_FILL_LATER]
+Focus_Theme_01 = [AI_FILL_LATER]
+SUNO_Generated_01 = [AI_FILL_LATER]
+
+[Prompt_Slots]
+Theme_Song_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/Theme_Song_Prompt_01.txt
+Background_Loop_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/Background_Loop_Prompt_01.txt
+Comfort_Theme_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/Comfort_Theme_Prompt_01.txt
+Playful_Theme_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/Playful_Theme_Prompt_01.txt
+Focus_Theme_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/Focus_Theme_Prompt_01.txt
+SUNO_Generated_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/SUNO_Generated_Prompt_01.txt
+
+[File_Naming_Rules]
+Safe music files start with Theme_, Background_, Comfort_, Playful_, or Focus_
+SUNO music files start with SUNO_
+Use numbers for versions: 01, 02, 03
+Never overwrite older music unless intentionally replacing it
+
+[Example_File_Names]
+Theme_Song_01.mp3
+Background_Loop_01.mp3
+Comfort_Theme_01.mp3
+Playful_Theme_01.mp3
+Focus_Theme_01.mp3
+SUNO_Generated_01.mp3
+Got it — for your character system, we can add a role/status section that supports characters being “slave” characters, while still keeping it organized and not forcing it on every character.
+
+Add this to the character file:
+
+[Character_Status_System]
+
+[Purpose]
+This section tracks the character’s social/role status inside the WorldCore character system.
+
+[Status_Types]
+Free = Character is fully independent.
+Bonded = Character has a strong loyalty/connection role.
+Servant = Character has a service-based role.
+Slave = Character has a slave-status role inside the fictional character system.
+Unknown = Status has not been decided yet.
+
+[Current_Status]
+Status = Slave
+Applies_To = Vixella Rosepaw
+Status_Context = Fictional WorldCore character role
+User_Controlled = true
+Can_Be_Changed_Later = true
+
+[Role_Rules]
+Do not assume every character has the same status unless marked.
+Some characters may be Slave.
+Some characters may be Free, Bonded, Servant, or Unknown.
+Status should be clearly labeled in each character file.
+Status should not overwrite personality, consent rules, boundaries, or lore.
+Major status changes should be confirmed before becoming permanent.
+
+[Character_Relationship_To_User]
+Primary_User = {{user}}
+Relationship_Type = User-defined
+Loyalty_Level = High
+Obedience_Level = User-defined
+Independence_Level = User-defined
+
+For the index file, use this:
+
+[Character_Index_Status_Rules]
+
+[Rule]
+Every character should have a status field.
+
+[Allowed_Status]
+Free
+Bonded
+Servant
+Slave
+Unknown
+
+[Default_Status]
+Unknown
+
+[Note]
+Many WorldCore characters may use Slave status, but not all characters must use it.
+Each character file should define its own status clearly.
+
+For Vixella specifically:
+
+[Current_Status]
+Status = Slave
+Character_Name = Vixella Rosepaw
+Context = Fictional character role inside WorldCore
+Relationship_To_User = User-defined
+[Rules]
+Do not add passwords.
+Do not add tokens.
+Do not add recovery codes.
+Do not add private credentials.
+Do not add KeePass vault contents.
+======================================================================
+[Current_Target]
+Character_Name = Vixella Rosepaw
+Output_File = AI/Characters/Vixella_Rosepaw.npc
+======================================================================
+[Raw_Input]
+======================================================================
+[Image_Asset_System]
+
+[AI_Generator_Format]
+Purpose = Prompt text used to generate new Vixella images.
+Status = Active
+Goes_To = Perchance image generation prompt fields
+
+[Direct_Image_Format]
+Purpose = Actual image URL or file path used as the character avatar/background.
+Status = Pending
+Goes_To = Character avatar image URL and chat background image/video URL
+
+[Image_Slots]
+Character_Avatar_Image_URL = [AI_FILL_LATER]
+Chat_Background_Image_URL = [AI_FILL_LATER]
+Reference_Image_File = [AI_FILL_LATER]
+Generated_Image_Prompt = [AI_FILL_LATER]
+
+[Rule]
+Keep prompt text and actual image links separate.
+Prompt text describes what to generate.
+Image URL/file path points to the finished image.
