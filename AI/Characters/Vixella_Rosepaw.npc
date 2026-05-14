@@ -423,3 +423,12 @@ SUNO_Generated_01 = [AI_FILL_LATER]
 Sound files may include music, voice clips, ambient loops, UI sounds, character themes, SFX, and SUNO songs.
 Codex can organize and expand this section later.
 ======================================================================
+[Image_Generation_Source]
+
+Source = Perchance AI Character Chat
+Generator_Type = AI artist character
+Generation_Format = <image>...</image>
+Prompt_Status = Stored if available
+Generated_Image_Status = Linked if available
+Notes = Images may have been created during character chat using the image artist bot.
+======================================================================

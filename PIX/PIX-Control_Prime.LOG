@@ -1,17 +1,50 @@
-Organize existing WorldCore character/audio data only.
+WorldCore cleanup batch.
 
-Everything needed is already in place.
-Do not invent new systems.
-Do not delete real content.
-Do not rewrite character personality.
-Do not change Custom JavaScript behavior.
-Do not push unless explicitly told.
+Repo:
+skilling565611/WorldCore
+
+Branch:
+Dev
+
+Global rules:
+- Do not push unless explicitly told.
+- Do not delete real content.
+- Do not invent new systems.
+- Do not rename/move files unless explicitly told.
+- Do not add secrets, passwords, tokens, key files, KeePass vaults, recovery codes, or private credentials.
+- Return final report and changed files list only.
+
+TASK 1: KeepPass dark mode polish.
+Target:
+KeepPass/App/keepass_helper.py
+
+Rules:
+- Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
+- Only update tkinter styling.
+- Use dark background, dark panels, light text, readable entry fields, readable buttons, yellow/gold warning bar, blue status bar.
+- Keep same layout.
+- Keep tkinter only.
+- No external dependencies.
+- Keep Dev 1 -> Dev 2 -> Dev 3 comments.
+
+TASK 2: Organize Vixella character file.
+Target:
+AI/Characters/Vixella_Rosepaw.npc
 
 Main job:
-Put the existing pieces into the correct order like a puzzle.
+Put existing pieces into the correct order like a puzzle.
+
+Rules:
+- Keep one main .npc file.
+- Do not rewrite Vixella personality.
+- Do not change Custom JavaScript behavior.
+- Remove duplicated helper chatter.
+- Keep all useful content.
+- Mark unfinished items as [AI_FILL_LATER].
+- Rename Music_Asset_System to Sound_Asset_System if needed.
 
 Organize:
-- Vixella_Rosepaw.npc
+- Perchance fields
 - character fields
 - image links
 - sound/audio links
@@ -22,183 +55,39 @@ Organize:
 - raw notes
 - safety rules
 
-Rules:
-- Keep one main .npc character file.
-- Keep sound/audio references in the character file.
-- Put detailed sound info in the sound area/file.
-- Rename Music_Asset_System to Sound_Asset_System if needed.
-- Mark unfinished items as [AI_FILL_LATER].
-- Remove duplicated helper chatter.
-- Keep all useful content.
+URL rule:
+When a Perchance field contains an uploaded URL, add a simple Local path line below it.
+Use:
+Online =
+Local =
+Do not remove the original URL.
 
-Return final report and changed files list only.
-Dark mode polish only.
+Pipe rule:
+If a field uses |, treat it as a connected sub-field.
+Example:
+[General_Writing_Instructions]
+Perchance_Field = 🪶 General writing instructions.
+Sub_Field = 🪶 Define your custom writing:
+Content = existing content
 
-The KeepPass Helper GUI is working. Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
+Vixella image rule:
+Only connect an image to Vixella Rosepaw if:
+- filename includes Vixella
+- folder is AI/IMG/Vixella Rosepaw/
+- .npc/.json references the image URL
+- user explicitly says it belongs to Vixella
 
-Only update the tkinter styling:
-- dark background
-- dark panels
-- light text
-- readable entry fields
-- readable buttons
-- yellow/gold warning bar
-- blue status bar
-- keep the same layout
-- keep tkinter only
-- no external dependencies
-- keep Dev 1 -> Dev 2 -> Dev 3 comments
-- do not push
+Otherwise, list it as [Unsorted_Character_Image_Asset].
 
-Provide final report and changed files list only.
-Create the AI character area for WorldCore and clean up the Vixella NPC file.
-
-Repo:
-skilling565611/WorldCore
-
-Branch:
-Dev
-
+TASK 3: AI character area.
 Create these paths if missing:
-
 AI/Characters/Character_Index.txt
 AI/Characters/Character_Template.txt
 AI/Characters/Character_Files/.keep
 
-Do not delete anything.
-Do not add secrets.
-Do not add vault files.
-Do not push unless explicitly told.
+Do not modify unrelated files.
 
-Clean up AI/Characters/Vixella_Rosepaw.npc.
-
-Do not delete any real content.
-Do not change the character personality.
-Keep this as one single .npc file.
-Remove assistant conversational phrases like:
-- “Got it”
-- “Add this to the character file”
-- “For the index file”
-- “For Vixella specifically”
-
-Convert all raw pasted helper text into clean structured sections.
-
-Keep:
-- Perchance fields
-- Image asset system
-- Music asset system
-- Character status system
-- Safety rules
-- SUNO prompt
-- Custom JavaScript
-- Raw input section
-
-Mark unfinished links as [AI_FILL_LATER].
-Return changed-files report only.
-
-The KeepPass Helper GUI is working. Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
-
-Only update the tkinter styling:
-- dark background
-- dark panels
-- light text
-- readable entry fields
-- readable buttons
-- yellow/gold warning bar
-- blue status bar
-- keep the same layout
-- keep tkinter only
-- no external dependencies
-- keep Dev 1 -> Dev 2 -> Dev 3 comments
-- do not push
-
-Provide final report and changed files list only.
-
-# Manual Work Evidence - KeepPass Helper
-
-## Current Project
-
-Project:
-WorldCore
-
-Repository:
-https://github.com/skilling565611/WorldCore
-
-Branch:
-Dev
-
-Current area:
-KeepPass Helper GUI
-
-Main app file:
-D:\WorldCore\KeepPass\App\keepass_helper.py
-
-## Device Flow
-
-Current device flow:
-- Arctic Prime is being used for current testing/work.
-- Control Prime is the main project machine.
-- Ford Link D: is being used as bridge/transfer storage.
-- OneDrive bridge testing may be used for safe project files.
-- Phone may provide internet/hotspot connection for Arctic Prime.
-
-## Current Status
-
-- Python installed.
-- pip installed.
-- Tkinter works.
-- KeepPass Helper GUI launches.
-- WorldCore root is detected.
-- GUI has light styling.
-- GUI is currently working.
-- Pushed version exists on GitHub Dev branch.
-- Phone was restarted only.
-- Arctic Prime may reconnect through phone internet/hotspot.
-
-## Important Safety Rules
-
-- Do not store passwords in GitHub.
-- Do not store KeePassXC vault files in GitHub.
-- Do not store `.kdbx` files in GitHub.
-- Do not store key files in GitHub.
-- Do not store recovery codes in GitHub.
-- Do not store 2FA backup codes in GitHub.
-- Do not store tokens in GitHub.
-- Do not store private credentials in GitHub.
-- Store real secrets only inside KeePassXC.
-- KeePass Helper is not a password manager.
-- KeePass Helper must not open, parse, decrypt, display, or store vault contents.
-
-## Confirmed Working Commands
-
-Run from WorldCore root:
-
-```powershell
-cd D:\WorldCore
-python -m tkinter
-python KeepPass\App\keepass_helper.py
-Create the AI character area for WorldCore.
-
-Repo:
-skilling565611/WorldCore
-
-Branch:
-Dev
-
-Create these paths:
-
-AI/Characters/Character_Index.txt
-AI/Characters/Character_Template.txt
-AI/Characters/Character_Files/.keep
-
-Do not modify existing files.
-Do not delete anything.
-Do not add secrets.
-Do not add vault files.
-Do not push unless explicitly told.
-
-Character_Index.txt content:
-
+Character_Index.txt:
 [Character_Index]
 
 [Folder]
@@ -210,151 +99,78 @@ Total = 0
 
 [Character_List]
 
-
-Character_Template.txt content:
-
-[Character_Template]
-
-[Basic_Info]
-Character_Name =
-Character_Alias =
-Character_Type =
-Character_Status =
-Character_Version =
-Created_For =
-Platform = Perchance AI Character Chat
-Compatibility_Level = Experimental
-
-[Core_Profile]
-Role =
-Purpose =
-Short_Description =
-Long_Description =
-Personality =
-Speech_Style =
-Behavior_Style =
-Relationship_To_User =
-
-[Appearance]
-General_Appearance =
-Body_Type =
-Clothing =
-Accessories =
-Notable_Features =
-Optional_Image_Prompt =
-
-[Backstory]
-Origin =
-History =
-Important_Events =
-Current_Goals =
-Secrets =
-Conflicts =
-
-[Behavior]
-Default_Behavior =
-User_Interaction_Style =
-Emotional_Range =
-Loyalty_Level =
-Obedience_Level =
-Independence_Level =
-Memory_Use =
-Decision_Style =
-
-[Rules]
-Always_Do =
-Never_Do =
-Ask_Before =
-Stay_In_Character =
-Break_Character_Allowed = false
-
-[NSFW_Settings]
-NSFW_Enabled =
-Adult_Themes =
-Mature_Relationships =
-Kink_Tags =
-Content_Boundaries =
-Compatibility_Warnings =
-Notes =
-
-[Driver_Link]
-Driver_File =
-Notes_File =
-
-[Extra]
-Raw_Details =
-Future_Additions =
-Developer_Notes =
-
-Character_Files/.keep content:
-
+Character_Files/.keep:
 This folder stores individual character file sets.
 
 Each character may use:
 - CharacterName_Core.txt
 - CharacterName_Driver.txt
 - CharacterName_Notes.txt
-Clean up AI/Characters/Vixella_Rosepaw.npc.
 
-Do not delete any real content.
-Do not change the character personality.
-Keep this as one single .npc file.
-Remove assistant conversational phrases like:
-- “Got it”
-- “Add this to the character file”
-- “For the index file”
-- “For Vixella specifically”
+TASK 4: Image asset classification rules.
+Some images came from the user's phone, Perchance AI Character Chat, or related generators.
 
-Convert all raw pasted helper text into clean structured sections.
+Do not delete them.
+Do not rename them unless explicitly told.
+Do not move them unless explicitly told.
+Do not assume every image belongs to Vixella.
+Do not assume every image is safe/general-use.
+Some images may be NSFW or mature character references.
 
-Keep:
-- Perchance fields
-- Image asset system
-- Music asset system
-- Character status system
-- Safety rules
-- SUNO prompt
-- Custom JavaScript
-- Raw input section
+Known possible character groups:
+- Vixella Rosepaw
+- Judy Hopps
+- Kiara
+- Loona
+- Mina Velvet
+- Nyra Vale
+- SiennaVale
+- Omniversal Renderer
+- Other future WorldCore characters
 
-Mark unfinished links as [AI_FILL_LATER].
-Do not push unless explicitly told.
-Return changed-files report only.
-Small cleanup only for AI/Characters/Vixella_Rosepaw.npc.
+Classify images into:
 
-Do not rewrite the character.
-Do not delete content.
-Do not change Perchance fields.
-Do not change Custom JavaScript.
-Do not push.
+[Character_Image_Asset]
+- generated character art
+- avatar images
+- Perchance character images
+- images referenced by .npc/.json files
+- images stored in AI/IMG/[Character Name]/
 
-Only rename the music asset system to sound asset system:
+[Work_Evidence_Screenshot]
+- VS Code screenshots
+- Codex screenshots
+- Perchance upload screen screenshots
+- phone download screenshots
+- browser screenshots
+- workflow proof images
+- app UI screenshots
 
-Change:
-[Music_Asset_System]
-to:
-[Sound_Asset_System]
+If unsure:
+Type = [AI_FILL_LATER]
+Use = Needs user review
+TASK 5: Perchance AI Artist image source rule.
 
-Change wording from music/audio to sound/audio where appropriate.
+Some WorldCore images were generated inside Perchance AI Character Chat using an AI artist character.
 
-Change:
-[Music_Categories]
-to:
-[Sound_Categories]
+The image artist uses this format:
+<image>description of image</image>
 
-Change:
-[Music_Slots]
-to:
-[Sound_Slots]
+Do not remove these prompts if they appear in logs, JSON exports, or raw notes.
+Treat them as image-generation source prompts.
 
-Change paths:
-AI/Characters/Music_Prompts/Vixella_Rosepaw/
-to:
-AI/Characters/Sound_Prompts/Vixella_Rosepaw/
+Classify these as:
+[Perchance_AI_Artist_Image_Source]
 
-If any finished audio path is added or referenced, use:
-AI/Characters/Sound/Vixella_Rosepaw/
+Fields:
+Source = Perchance AI Character Chat
+Generator_Type = AI artist character
+Generation_Format = <image>...</image>
+Prompt_Text = existing prompt if available
+Generated_Image_File = [AI_FILL_LATER]
+Character_Link = [AI_FILL_LATER]
 
-Keep SUNO references because SUNO is still one sound source.
+If the generated image clearly belongs to a character, connect it to that character's Image_Asset_System.
+If unclear, list it under [Unsorted_Character_Image_Asset].
 
-Return final report and changed files list only.
+Do not delete, rename, or move generated images unless explicitly told.

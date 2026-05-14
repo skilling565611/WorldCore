@@ -1,0 +1,8 @@
+[Image_Generation_Source]
+
+Source = Perchance AI Character Chat
+Generator_Type = AI artist character
+Generation_Format = <image>...</image>
+Prompt_Status = Stored if available
+Generated_Image_Status = Linked if available
+Notes = Images may have been created during character chat using the image artist bot.
