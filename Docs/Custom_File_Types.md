@@ -1,6 +1,8 @@
 # WorldCore Custom File Types
 
-WorldCore uses DevF6rge-style structured file concepts for some planning, configuration, command, profile, and worldbuilding data. These files are plain text formats that can group information with bracketed categories and simple key/value records.
+WorldCore uses JacobS / Dev's DevF6rge-style structured file concepts as a working foundation for some planning, configuration, command, profile, and worldbuilding data. These files are plain text formats that can group information with bracketed categories and simple key/value records.
+
+DevF6rge is treated as the current reference pattern for WorldCore structured files, not a final locked standard. WorldCore may expand the format later as systems become more defined.
 
 This document is for documentation only. It does not create a VS Code extension, parser, or runtime behavior.
 
@@ -40,6 +42,10 @@ Example:
 [WorldCore]:{
     [ControlPrime]:{
         Role=Main Workstation
+        Status=Active
+    }
+    [ArcticPrime]:{
+        Role=Control Hub
         Status=Active
     }
 }
