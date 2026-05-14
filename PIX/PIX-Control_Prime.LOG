@@ -17,6 +17,68 @@ Only update the tkinter styling:
 - do not push
 
 Provide final report and changed files list only.
+Create the AI character area for WorldCore and clean up the Vixella NPC file.
+
+Repo:
+skilling565611/WorldCore
+
+Branch:
+Dev
+
+Create these paths if missing:
+
+AI/Characters/Character_Index.txt
+AI/Characters/Character_Template.txt
+AI/Characters/Character_Files/.keep
+
+Do not delete anything.
+Do not add secrets.
+Do not add vault files.
+Do not push unless explicitly told.
+
+Clean up AI/Characters/Vixella_Rosepaw.npc.
+
+Do not delete any real content.
+Do not change the character personality.
+Keep this as one single .npc file.
+Remove assistant conversational phrases like:
+- “Got it”
+- “Add this to the character file”
+- “For the index file”
+- “For Vixella specifically”
+
+Convert all raw pasted helper text into clean structured sections.
+
+Keep:
+- Perchance fields
+- Image asset system
+- Music asset system
+- Character status system
+- Safety rules
+- SUNO prompt
+- Custom JavaScript
+- Raw input section
+
+Mark unfinished links as [AI_FILL_LATER].
+Return changed-files report only.
+
+The KeepPass Helper GUI is working. Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
+
+Only update the tkinter styling:
+- dark background
+- dark panels
+- light text
+- readable entry fields
+- readable buttons
+- yellow/gold warning bar
+- blue status bar
+- keep the same layout
+- keep tkinter only
+- no external dependencies
+- keep Dev 1 -> Dev 2 -> Dev 3 comments
+- do not push
+
+Provide final report and changed files list only.
 
 # Manual Work Evidence - KeepPass Helper
 
@@ -198,3 +260,29 @@ Each character may use:
 - CharacterName_Core.txt
 - CharacterName_Driver.txt
 - CharacterName_Notes.txt
+Clean up AI/Characters/Vixella_Rosepaw.npc.
+
+Do not delete any real content.
+Do not change the character personality.
+Keep this as one single .npc file.
+Remove assistant conversational phrases like:
+- “Got it”
+- “Add this to the character file”
+- “For the index file”
+- “For Vixella specifically”
+
+Convert all raw pasted helper text into clean structured sections.
+
+Keep:
+- Perchance fields
+- Image asset system
+- Music asset system
+- Character status system
+- Safety rules
+- SUNO prompt
+- Custom JavaScript
+- Raw input section
+
+Mark unfinished links as [AI_FILL_LATER].
+Do not push unless explicitly told.
+Return changed-files report only.

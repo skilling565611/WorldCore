@@ -400,7 +400,11 @@ Keep prompt text and actual image links separate.
 Prompt text describes what to generate.
 Image URL/file path points to the finished image.
 ======================================================================
+[Music_Asset_System]
 
-
+SUNO_Generated_01 = AI/Characters/Music/Vixella_Rosepaw/SUNO_Generated_01.mp3
+SUNO_Generated_Prompt_01 = AI/Characters/Music_Prompts/Vixella_Rosepaw/SUNO_Generated_Prompt_01.txt
+Chat_Background_Music_Audio_URL = [AI_FILL_LATER]
+======================================================================
 
 
