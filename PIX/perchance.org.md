@@ -8,7 +8,7 @@ PIX .dev files with "Control Prime" or "Arctic Prime" in the filename are transf
 
 Keep this PIX folder available for tracked documentation such as perchance.org.md. Do not ignore the whole PIX folder.
 
-Perchance AI editor notes may reference WorldCore custom file types and DevForge v1.0.7 / DevF6rge-style bracket syntax. Stable file type notes belong in README.md or Docs/Custom_File_Types.md.
+Perchance AI editor notes may reference WorldCore custom file types and DevForge v1.0.7 / DevF6rge-style bracket syntax. Suggested groups are examples only; stable file type notes belong in README.md or Docs/Custom_File_Types.md.
 
 ## Basic Character Info
 

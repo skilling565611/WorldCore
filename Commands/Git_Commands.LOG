@@ -173,3 +173,45 @@ Notes:
 WorldCore stores safe docs, logs, command notes, and project structure.
 KeePassXC stores real secrets.
 Do not place real vaults or credentials in this repo.
+
+[Run KeepPass Helper GUI]
+Command:
+python KeepPass/App/keepass_helper.py
+
+Use:
+Launches the WorldCore KeepPass Helper GUI.
+
+Safety:
+The helper manages encrypted vault file movement only and does not read passwords.
+
+[Run KeepPass Helper GUI Launcher]
+Command:
+powershell -ExecutionPolicy Bypass -File KeepPass/App/Run_KeepPass_Helper.ps1
+
+Use:
+Finds a Python install with Tkinter/Tcl-Tk support and launches the WorldCore KeepPass Helper GUI.
+
+Optional Python Path:
+powershell -ExecutionPolicy Bypass -File KeepPass/App/Run_KeepPass_Helper.ps1 -PythonPath C:/Path/To/Python/python.exe
+
+Safety:
+The launcher only checks Python Tkinter availability and starts the helper app.
+
+[Python Add-on / Dependency Setup]
+
+Commands:
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r Requirements/requirements.txt
+python -m tkinter
+python KeepPass/App/keepass_helper.py
+deactivate
+
+Use:
+Sets up the local Python add-on/plugin sandbox for WorldCore.
+
+Safety:
+Do not commit .venv.
+Do not store secrets.
+Do not pip install tkinter.

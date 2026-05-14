@@ -1,0 +1,3 @@
+# WorldCore Python development dependencies
+# Add formatter/test/dev tools here only when needed.
+# Do not add secrets or private packages.

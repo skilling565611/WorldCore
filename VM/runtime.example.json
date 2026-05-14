@@ -1,0 +1,27 @@
+{
+  "runtime_name": "Control Prime Python Runtime",
+  "language": "Python",
+  "python_executable": "python",
+  "use_virtual_environment": true,
+  "virtual_environment_path": ".venv",
+  "activation_command_powershell": ".\\.venv\\Scripts\\Activate.ps1",
+  "activation_command_cmd": ".venv\\Scripts\\activate.bat",
+  "working_directory": "D:/WorldCore",
+  "script_path": "KeepPass/App/keepass_helper.py",
+  "script_arguments": [],
+  "run_command": "python KeepPass/App/keepass_helper.py",
+  "tkinter_test_command": "python -m tkinter",
+  "requirements_file": "Requirements/requirements.txt",
+  "dev_requirements_file": "Requirements/dev-requirements.txt",
+  "environment": {
+    "WORLDCORE_ROOT": "D:/WorldCore",
+    "WORLDCORE_RUNTIME": "Control Prime",
+    "WORLDCORE_MODE": "Local"
+  },
+  "notes": [
+    "WorldCore uses the term VM Argument for runtime and launch configuration.",
+    "Python dependencies should be installed into .venv, not the main system Python.",
+    "Tkinter is not installed through pip.",
+    "Do not store secrets in runtime config."
+  ]
+}

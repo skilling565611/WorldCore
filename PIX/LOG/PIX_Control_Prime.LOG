@@ -1,0 +1,25 @@
+[KeepPass Helper Note]
+
+Python GUI helper planned/created.
+
+Path:
+KeepPass/App/keepass_helper.py
+
+Purpose:
+Safe file workflow helper for KeePassXC backups/transfers.
+
+Security Rule:
+Does not read passwords or decrypt vaults.
+
+Control Prime Indie File Rule:
+Control Prime indie/individual files are read/inspect only unless explicit permission is given.
+Do not delete, rename, move, clean up, merge, or overwrite indie files without permission.
+
+[Python Add-on Dependency Trunk Note]
+
+Python add-on/dependency trunk created.
+Requirements area created.
+`.venv` is used as the local plugin/add-on sandbox.
+`.venv` must not be pushed.
+KeepPass Helper still uses Tkinter.
+Tkinter must come from the Python install, not pip.

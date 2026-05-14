@@ -18,7 +18,7 @@ You must read the disclaimer and license before using, copying, modifying, or re
 
 ## Custom File Types
 
-WorldCore uses JacobS / Dev's DevForge v1.0.7 / DevF6rge-style structured file concepts as a working foundation for some development, config, command, profile, and worldbuilding files.
+WorldCore uses JacobS / Dev's DevForge v1.0.7 / DevF6rge-style structured file concepts as a working foundation for some development, config, command, profile, log, and worldbuilding files. DevForge is a reference pattern that may evolve, not a final strict WorldCore standard.
 
 See [Docs/Custom_File_Types.md](Docs/Custom_File_Types.md) for the current WorldCore file type notes.
 

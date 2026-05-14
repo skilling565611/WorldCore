@@ -1,12 +1,24 @@
 # WorldCore Custom File Types
 
-WorldCore uses JacobS / Dev's DevForge v1.0.7 / DevF6rge-style structured file concepts as a working foundation for some planning, configuration, command, profile, and worldbuilding data. These files are plain text formats that can group information with bracketed categories and simple key/value records.
+WorldCore uses JacobS / Dev's DevForge v1.0.7 / DevF6rge-style structured file concepts as a working foundation for some planning, configuration, command, profile, and worldbuilding data. These files are plain text formats for readable config, profile, log, command, and data records.
 
-DevF6rge is a custom VS Code-recognized structured file format and language package. DevForge v1.0.7 is treated as the current working reference pattern for WorldCore structured files, not a final locked standard. WorldCore may expand the format later as systems become more defined.
+DevF6rge is a custom VS Code-recognized structured file format and language package. DevForge v1.0.7 is treated as the current working reference pattern for WorldCore structured files, not a final locked standard. The DevForge README also contains personal notes and suggested file groups; those notes are useful examples, not required WorldCore parser behavior.
 
 This document is for documentation only. It does not create a VS Code extension, parser, or runtime behavior.
 
-## Core File Types
+## Required Rules
+
+- Categories use bracket syntax.
+- Subcategories use the same bracket syntax.
+- Parsers should validate structure and syntax, not naming conventions, unless application logic reserves specific names.
+- Extensions are case-insensitive unless a future implementation overrides that rule.
+- Formatting and spacing may vary by parser or tool implementation.
+- Applications may reserve custom groups, categories, keys, or category names for their own behavior.
+- WorldCore may expand the format later as systems become more defined.
+
+## DevForge Reference File Types
+
+These are the current DevForge v1.0.7 recognized file types that WorldCore may use as a reference. Some file types may remain experimental, temporary, or project-specific until WorldCore systems define them more clearly.
 
 | Extension | Purpose |
 | --- | --- |
@@ -22,7 +34,9 @@ This document is for documentation only. It does not create a VS Code extension,
 
 DevF6rge `package.json` currently appears to include `.Dex,` with a comma in one extension string. WorldCore does not fix or modify DevF6rge from this repository; this documentation records the intended `.Dex` / `.DEX` / `.dex` forms.
 
-## Planned WorldCore Aliases
+## Planned WorldCore Examples
+
+These planned WorldCore-specific aliases are examples and targets for future organization. They are not required parser behavior yet.
 
 | Extension | Purpose |
 | --- | --- |
@@ -34,11 +48,9 @@ DevF6rge `package.json` currently appears to include `.Dex,` with a comma in one
 | `.pix` | PIX bridge metadata. |
 | `.template` | Reusable templates. |
 
-## Syntax Rules
+## Example Structure
 
-Categories use bracket syntax. Subcategories use the same bracket syntax.
-
-Example:
+This example shows the bracket category style WorldCore expects to use:
 
 ```text
 [WorldCore]:{
@@ -53,11 +65,7 @@ Example:
 }
 ```
 
-The parser should validate structure and syntax, not naming conventions, unless application logic reserves specific names.
-
-Extensions are case-insensitive unless a future implementation overrides that rule. Formatting and spacing may vary by parser or tool implementation.
-
-Applications may reserve custom groups, categories, keys, or category names for their own behavior.
+Suggested groups, categories, and file names are examples only unless a WorldCore application reserves them.
 
 ## PIX Rules
 

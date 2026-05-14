@@ -32,6 +32,10 @@ Do not store:
 
 Real secrets belong only inside KeePassXC.
 
+## File Safety Rule
+
+Do not delete, rename, move, merge, overwrite, or clean up existing indie/individual workflow files without explicit permission. If a file looks outdated, duplicated, messy, or unused, report it first and leave it in place.
+
 ## Current Device Roles
 
 - Control Prime: primary KeePassXC vault source
@@ -44,3 +48,25 @@ Real secrets belong only inside KeePassXC.
 Offline-first with manual/network merge sync.
 
 If network/IP sync is unreliable, use manual merge or a cloud bridge transfer workflow.
+
+## Helper GUI
+
+The WorldCore KeepPass Helper GUI lives at:
+
+```text
+KeepPass/App/keepass_helper.py
+```
+
+Launcher:
+
+```text
+KeepPass/App/Run_KeepPass_Helper.ps1
+```
+
+It is a safe file workflow helper for encrypted KeePassXC vault backups and transfers. It is not a password manager and does not read, decrypt, display, store, or log passwords.
+
+See:
+
+```text
+KeepPass/Docs/KeepPass_Helper.md
+```
