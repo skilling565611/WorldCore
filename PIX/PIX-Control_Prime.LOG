@@ -17,3 +17,67 @@ Only update the tkinter styling:
 - do not push
 
 Provide final report and changed files list only.
+
+# Manual Work Evidence - KeepPass Helper
+
+## Current Project
+
+Project:
+WorldCore
+
+Repository:
+https://github.com/skilling565611/WorldCore
+
+Branch:
+Dev
+
+Current area:
+KeepPass Helper GUI
+
+Main app file:
+D:\WorldCore\KeepPass\App\keepass_helper.py
+
+## Device Flow
+
+Current device flow:
+- Arctic Prime is being used for current testing/work.
+- Control Prime is the main project machine.
+- Ford Link D: is being used as bridge/transfer storage.
+- OneDrive bridge testing may be used for safe project files.
+- Phone may provide internet/hotspot connection for Arctic Prime.
+
+## Current Status
+
+- Python installed.
+- pip installed.
+- Tkinter works.
+- KeepPass Helper GUI launches.
+- WorldCore root is detected.
+- GUI has light styling.
+- GUI is currently working.
+- Pushed version exists on GitHub Dev branch.
+- Phone was restarted only.
+- Arctic Prime may reconnect through phone internet/hotspot.
+
+## Important Safety Rules
+
+- Do not store passwords in GitHub.
+- Do not store KeePassXC vault files in GitHub.
+- Do not store `.kdbx` files in GitHub.
+- Do not store key files in GitHub.
+- Do not store recovery codes in GitHub.
+- Do not store 2FA backup codes in GitHub.
+- Do not store tokens in GitHub.
+- Do not store private credentials in GitHub.
+- Store real secrets only inside KeePassXC.
+- KeePass Helper is not a password manager.
+- KeePass Helper must not open, parse, decrypt, display, or store vault contents.
+
+## Confirmed Working Commands
+
+Run from WorldCore root:
+
+```powershell
+cd D:\WorldCore
+python -m tkinter
+python KeepPass\App\keepass_helper.py
