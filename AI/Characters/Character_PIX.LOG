@@ -1,0 +1,53 @@
+===========================================
+=🪪 Character name: Sammy
+=🎭 Character description/personality/instruction/role. This should ideally be less than 1000 words (read more). If you have several thousand words of info you need the AI to know about this character, scroll down to the 'lorebook' section. Also, you can write {{user}} to refer to the user's name so you don't have to update this description if you change your name. ℹ️ Include the most important details first. Also, it's a good idea to include example dialogue if you can - show the AI how you want the character to speak.
+= 👤 Character avatar image URL. For example, a png/jpg/webp/gif/etc. Use the upload button below, or you can generate an image here and then upload it here. (optional) https://user.uploads.dev/file/example.jpeg 📂
+=📏 Strict message length limit. Try setting this to one paragraph if the character keeps undesirably talking/acting on your behalf.
+=No reply length limit User's name. This overrides the user's default username when creating a new chat thread with this character. (optional)
+=User's description/role. What role do you, the user, play when talking to this character? This overrides the user's default description (which is specified in the left side-bar settings) when chatting with this character. (optional)
+=User's avatar pic URL. This overrides the user's default avatar pic (the one that's specified your user settings) when chatting to this character. (optional) https://user.uploads.dev/file/example.jpeg 📂
+=💭 Character reminder note. Remind the AI of important things, writing tips, and so on. Use this for important stuff that the AI often forgets. Try to keep this under 100 words - i.e. about a paragraph at most. (read more) (optional) e.g. "Responses should be short and creative. Always stay in character."
+=🪶 General writing instructions. These instructions apply to the whole chat, regardless of which character is currently speaking. It's for defining general writing style, overarching rules, and defining the "type of experience" that you'd like chats with this character to be. ℹ️ 𝗖𝘂𝘀𝘁𝗼𝗺 ↓ 🪶 Define your custom writing instructions here. Use this to give high-level instructions about the overall experience, writing style, etc. Note that this box is not for defining how this particular character speaks/writes (use the character description for that). This box is for more general instructions. Here's a complex example (yours can be much more simple). Example instructions: - Each message should generally include dialogue, actions, and thoughts. - Ground your writing in rich sensory details: the crunch of gravel underfoot, the faint hum of machinery, the sharp tang of iron in the air
+===========================================
+=💬 Initial chat messages. You can use this to teach the AI how this character typically speaks, and/or to define an initial scenario. Follow the "[AI]: ... [USER]: ..." format which is fully explained here. ℹ️ [USER]: hey [AI]: um hi [SYSTEM; hiddenFrom=ai]: The AI can't see this message. Useful for user instructions / welcome messages / credits / etc.
+💭 User reminder note. In case you get the AI to write on your behalf, this is the reminder note used in that case.
+=(optional) e.g. "Responses should be short and creative. Always stay in character."
+=🔤 Default message style (color, font, size, etc.). E.g. try adding color:blue; font-size:90%;, and read this to learn other options - it's very customizable - message bubble background color/image, glowing text, etc. You can start with a preset, and then ask an AI to tweak it for you. Click button for presets 👉 💡 show examples
+=🖼️ Chat background image/video URL. Use perchance.org/upload to upload your images/videos. URL should end in .jpg or .webp or .webm or .mp4, etc. https://user.uploads.dev/file/example.jpeg/
+=🎵 Chat background music/audio URL. Use perchance.org/upload to upload your audio. The URL should generally end in .mp3 or .webm or .mp4 or .ogg, etc. ℹ️ https://user.uploads.dev/file/example.mp3/
+=🖼️➡️ Image generation prompt starter. This text will be automatically added to the start of all image generation requests. This text will strongly affect the style and content of the generated images. You can use Perchance syntax and text-to-image-plugin prompt syntax. ghibli style anime art, {soft|pastel} colors, 
+=🖼️🔚 Image generation prompt ending. This text will be automatically added to the end of all image generation requests. You can use Perchance syntax and text-to-image-plugin prompt syntax. , breathtaking visual, (negativePrompt:::blurry, bad quality)
+=🖼️🪤 Image prompt keyword triggers. Use this feature to add situation-specific visual info about characters, places, etc. The word/phrase before the ":" is the trigger. If that trigger text appears in any image generation prompt that the AI writes in your chat, then the "description" text that you write after the ":" will be added to the end of the existing image prompt. Each line should be look like the trigger: the description text.... If you want the description text to be added to the start of the text, write "@prepend" at the start of the description. Katie: Katie has brown hair, green eyes and a bob haircut. She [...] Fruiford: Fruiford is a city with large stone walls and [...] Carrot Boy: Carrot Boy is a supervillain who [...] /your.?regex.*pattern/: Here's a regex-triggered {example|demo} with Perchance syntax.
+=Blah: @prepend This text will be added to the start of the prompt when the AI writes 'Blah' in an image generation prompt in your chat.
+=📖 Lorebook URLs - one URL per line. URL should generally end in .txt. Use perchance.org/upload to upload your lore files. Each lore file/URL can contain thousands of entries, so you will most often need only one URL in the box below. Each entry within a particular lore file/URL should be a fact about the character/world, and should be no longer than one or two sentences. There should be a blank line between entries/sentences in the file. For lorebook changes to propagate to preexisting threads, you need to use the /lore command and click the reload button. Visit this page to learn more.
+===========================================
+=@name=🗣️ {{char}}
+=@message=/ai <optional writing instruction>
+=@insertionType=replace
+=@autoSend=no
+===========================================
+=@name=🗣️ {{user}}
+=@message=/user <optional writing instruction>
+=@insertionType=replace
+=@autoSend=no
+===========================================
+=@name=🗣️ Narrator
+=@message=/nar <optional writing instruction>
+=@insertionType=replace
+=@autoSend=no
+===========================================
+=@name=🖼️ Image
+=@message=/image --num=3
+=@insertionType=replace
+=@autoSend=no
+===========================================
+=🧑‍💻 Custom JavaScript code. This allows you to e.g. give your bot access to the internet and do a whole lot of other fancy stuff. Visit this page to learn more.
+=oc.thread.on("MessageAdded", function({message}) {message.content += " :)"; // add a smiley to end of each message});​
+=System's name:
+=System's avatar pic URL:
+=Message input placeholder:
+=e.g. "Type your reply to {{char}} here..."
+=Social media share link preview title.
+=Social media share link preview description.
+=Social media share link preview image URL.
+====================
