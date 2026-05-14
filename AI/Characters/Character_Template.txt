@@ -1,0 +1,30 @@
+[Character_Template]
+
+[File_Info]
+Character_Name = [AI_FILL_LATER]
+Character_File = [AI_FILL_LATER]
+Platform = Perchance AI Character Chat
+Status = Draft
+
+[Character_Fields]
+Description = [AI_FILL_LATER]
+Reminder = [AI_FILL_LATER]
+Writing_Instructions = [AI_FILL_LATER]
+
+[Image_Asset_System]
+Character_Image_Asset = [AI_FILL_LATER]
+Unsorted_Character_Image_Asset = [AI_FILL_LATER]
+
+[Sound_Asset_System]
+Sound_Asset = [AI_FILL_LATER]
+
+[Raw_Notes]
+Notes = [AI_FILL_LATER]
+
+[Safety_Rules]
+Do not add passwords.
+Do not add tokens.
+Do not add recovery codes.
+Do not add private credentials.
+Do not add KeePass vault contents.
+Never store .kdbx files in GitHub.

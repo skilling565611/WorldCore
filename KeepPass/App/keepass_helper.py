@@ -67,11 +67,15 @@ class KeepPassHelperApp:
         # Dev 1 -> Dev 2 -> Dev 3:
         # KeepPass helper styling area.
         self.colors = {
-            "bg": "#edf4fb",
-            "panel": "#f8fbff",
-            "warning": "#fff4d6",
-            "status": "#e8f0fe",
-            "text": "#1f2937",
+            "bg": "#101620",
+            "panel": "#17202b",
+            "field": "#0d1118",
+            "warning": "#6b520f",
+            "status": "#12345a",
+            "text": "#e6edf3",
+            "muted": "#b8c4d2",
+            "accent": "#7aa2f7",
+            "border": "#2f3b4c",
         }
 
         self.root.configure(bg=self.colors["bg"])
@@ -84,7 +88,17 @@ class KeepPassHelperApp:
         style.configure("Title.TLabel", background=self.colors["bg"], foreground=self.colors["text"], font=("Segoe UI", 17, "bold"))
         style.configure("Section.TLabel", background=self.colors["bg"], foreground=self.colors["text"], font=("Segoe UI", 11, "bold"))
         style.configure("Warning.TLabel", background=self.colors["warning"], foreground=self.colors["text"], font=("Segoe UI", 10, "bold"), padding=6)
-        style.configure("TButton", padding=6)
+        style.configure("TButton", padding=6, background=self.colors["panel"], foreground=self.colors["text"])
+        style.map("TButton", background=[("active", self.colors["status"])], foreground=[("disabled", self.colors["muted"])])
+        style.configure(
+            "TEntry",
+            fieldbackground=self.colors["field"],
+            foreground=self.colors["text"],
+            insertcolor=self.colors["accent"],
+            bordercolor=self.colors["border"],
+            lightcolor=self.colors["border"],
+            darkcolor=self.colors["border"],
+        )
         style.configure("Status.TLabel", background=self.colors["status"], foreground=self.colors["text"], padding=6)
 
     def _build_ui(self) -> None:
@@ -168,6 +182,9 @@ class KeepPassHelperApp:
             wrap="word",
             bg=self.colors["panel"],
             fg=self.colors["text"],
+            insertbackground=self.colors["accent"],
+            selectbackground=self.colors["accent"],
+            selectforeground=self.colors["field"],
             relief="solid",
             borderwidth=1,
         )

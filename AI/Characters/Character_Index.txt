@@ -1,0 +1,10 @@
+[Character_Index]
+
+[Folder]
+Root = AI/Characters/
+Character_Files = AI/Characters/Character_Files/
+
+[Characters]
+Total = 0
+
+[Character_List]

@@ -1,0 +1,6 @@
+This folder stores individual character file sets.
+
+Each character may use:
+- CharacterName_Core.txt
+- CharacterName_Driver.txt
+- CharacterName_Notes.txt
