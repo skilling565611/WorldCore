@@ -1,0 +1,175 @@
+[WorldCore Git Command Area]
+
+Purpose:
+This file stores safe Git command notes for WorldCore.
+
+Repository:
+WorldCore
+
+Mode Notes:
+Split Traffic mode may be active during some sessions.
+When Split Traffic is active, do not push unless explicit permission is given.
+
+Current Rule:
+Push only when JacobS gives permission.
+
+[Check Status]
+Command:
+git status
+
+Use:
+Shows changed, staged, untracked, and branch status.
+
+[View Diff]
+Command:
+git diff
+
+Use:
+Shows exact local file changes before staging.
+
+[View Diff Summary]
+Command:
+git diff --stat
+
+Use:
+Shows quick changed-file summary.
+
+[Stage All Changes]
+Command:
+git add .
+
+Use:
+Stages all current local changes.
+
+Warning:
+Check for secrets and unrelated changes before using this.
+
+[Stage One File]
+Command:
+git add path/to/file
+
+Use:
+Stages only one specific file.
+
+[Commit Changes]
+Command:
+git commit -m "message here"
+
+Use:
+Creates a local commit.
+
+Example:
+git commit -m "Add Control Prime setup and traffic logs"
+
+[Pull Latest Changes]
+Command:
+git pull
+
+Use:
+Pulls latest remote changes into the local repo.
+
+Rule:
+Run before pushing if the repo may have changed elsewhere.
+
+[Push Changes]
+Command:
+git push
+
+Use:
+Pushes committed local changes to GitHub.
+
+Permission Rule:
+Only run when push permission is given.
+
+[Full Safe Push Flow]
+Commands:
+git status
+git diff --stat
+git add path/to/file
+git status
+git commit -m "Add setup logs and device docs"
+git pull
+git push
+
+Use:
+Standard flow for checking, committing, pulling, and pushing selected files.
+
+[Local Only Flow]
+Commands:
+git status
+git diff --stat
+
+Use:
+Use during Split Traffic mode when pushing is not allowed.
+
+[Safety Check Before Push]
+Checklist:
+- No `.kdbx` files
+- No `.key` files
+- No passwords
+- No recovery codes
+- No 2FA backup codes
+- No sync/share codes
+- No API tokens
+- No GitHub tokens
+- No private credential files
+- No accidental vault backups
+- Push permission confirmed
+
+[Secret Search Commands]
+
+PowerShell:
+Select-String -Path (Get-ChildItem -Recurse -File).FullName -Pattern "password|token|secret|recovery|2FA|kdbx|key"
+
+Git Bash:
+grep -RniE "password|token|secret|recovery|2FA|kdbx|key" .
+
+Use:
+Searches the repo for risky words before pushing.
+
+Warning:
+These searches may find safe documentation that says not to store secrets.
+Review results manually.
+
+[Undo Staged Files]
+Command:
+git reset
+
+Use:
+Unstages files without deleting changes.
+
+[Undo One File Before Commit]
+Command:
+git restore path/to/file
+
+Use:
+Restores one file back to the last committed version.
+
+Warning:
+This deletes local changes for that file.
+
+[View Commit History]
+Command:
+git log --oneline --decorate --graph --all
+
+Use:
+Shows commit history in compact form.
+
+[Branch Check]
+Command:
+git branch
+
+Use:
+Shows current branch.
+
+[Remote Check]
+Command:
+git remote -v
+
+Use:
+Shows connected GitHub remote.
+
+Notes:
+WorldCore stores safe docs, logs, command notes, and project structure.
+KeePassXC stores real secrets.
+Do not place real vaults or credentials in this repo.

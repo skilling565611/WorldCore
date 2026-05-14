@@ -1,4 +1,4 @@
-IMPORTANT: Split traffic mode is active. Do not push to GitHub or perform remote publish actions. Only make local changes and provide a diff/report unless explicitly told to push.
+IMPORTANT: Split traffic mode is active. Do not push to GitHub or perform remote publish actions unless explicitly told to push.
 [Control Prime PIX Log]
 
 Status:
@@ -94,3 +94,16 @@ Temporary and should be replaced later.
 Security Rule:
 Do not store the actual password in WorldCore, GitHub, logs, screenshots, or chat.
 Store the final password only in KeePassXC.
+
+[Command Area Note]
+
+A command area has been added for Git workflow notes.
+
+Path:
+WorldCore/Commands/Git_Commands.LOG
+
+Purpose:
+Stores safe Git command notes for status, diff, pull, commit, and push workflows.
+
+Rule:
+When Split Traffic mode is active, push commands require explicit permission.
