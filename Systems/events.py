@@ -7,7 +7,9 @@ from datetime import datetime
 
 event_log = []
 
-# Allowed event categories for simple organization.
+# Known event categories for simple organization.
+# add_event currently stores any category text it receives so older/free-form logs still work.
+# Validation may be added later if WorldCore needs stricter event data.
 event_categories = [
     "system",
     "threat",
@@ -23,6 +25,8 @@ def add_event(title, category, location_id, description):
     """
     Adds a new event to the WorldCore event log.
     Returns the created event dictionary.
+
+    TODO: Decide later whether category should be validated against event_categories.
     """
     event_id = len(event_log) + 1
 
@@ -110,7 +114,7 @@ if __name__ == "__main__":
 
     add_event(
         title="The Key Returned Online",
-        category="base_status",
+        category="base",
         location_id="the_key",
         description="The Key base is active and ready for prison tower mode."
     )

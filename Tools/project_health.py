@@ -42,6 +42,9 @@ REQUIRED_FILES = {
     "Interface": [
         "worldcore_hub.py"
     ],
+    "KeepPass/App": [
+        "keepass_helper.py"
+    ],
     "Tests": [
         "test_all.py"
     ],
@@ -50,7 +53,10 @@ REQUIRED_FILES = {
     ],
     "Tools": [
         "backup_manager.py",
-        "project_health.py"
+        "project_health.py",
+        "ai_image_organizer.py",
+        "perchance_file_scanner.py",
+        "perchance_schema_helper.py"
     ]
 }
 

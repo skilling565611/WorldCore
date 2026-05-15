@@ -44,3 +44,6 @@ Private/
 *.backup
 *.tmp
 desktop.ini
+AI/Characters/input.LOG
+AI/Characters/Character_PIX.LOG
+AI/Characters/README.md

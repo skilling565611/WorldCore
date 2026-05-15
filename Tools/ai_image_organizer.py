@@ -1,6 +1,6 @@
 # ai_image_organizer.py
 # Lightweight local image categorization helper for WorldCore AI/IMG.
-# This tool reads filenames and folders only. It does not move, edit, upload, or analyze images.
+# This tool reads filenames and folders only. It does not move, rename, delete, upload, or analyze images.
 
 import os
 
@@ -15,6 +15,24 @@ IMAGE_EXTENSIONS = [
 ]
 
 CATEGORY_KEYWORDS = {
+    "character_image_asset": [
+        "character",
+        "vixella",
+        "rosepaw",
+        "judy",
+        "kiara",
+        "loona",
+        "mina",
+        "nyra",
+        "sienna"
+    ],
+    "work_evidence_screenshot": [
+        "screenshot",
+        "vscode",
+        "codex",
+        "browser",
+        "upload"
+    ],
     "body_references": [
         "body",
         "pose",
@@ -81,7 +99,7 @@ def is_image_file(file_name):
 
 
 def guess_category(file_path):
-    """Guesses a category from folder and filename text."""
+    """Guesses a category from folder and filename text without inspecting image contents."""
     lower_path = file_path.lower().replace("\\", "/")
 
     for category_id, keywords in CATEGORY_KEYWORDS.items():

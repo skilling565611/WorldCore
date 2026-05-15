@@ -28,6 +28,9 @@ def create_backup(backup_name):
     """
     Creates a milestone backup beside the WorldCore folder.
     Does not overwrite an existing backup folder.
+
+    TODO: Add an ignore list before using this for routine backups so .git,
+    .venv, caches, logs, and generated files are not copied unintentionally.
     """
     source_folder = get_worldcore_folder()
     backup_parent = get_backup_parent_folder()

@@ -4,6 +4,9 @@
 
 
 # Rank classes from lowest to highest normal access.
+# Normal ranks advance A1-A10, then B1-B10, continuing through Z10.
+# Current control logic is class-first: B1 outranks A10, and Z10 is the top normal rank.
+# God-tier ranks sit above all A-Z ranks and are intentionally kept separate.
 rank_classes = [
     "A", "B", "C", "D", "E", "F", "G",
     "H", "I", "J", "K", "L", "M", "N",
@@ -63,7 +66,7 @@ def can_control_rank(user_rank, target_rank):
 
     Rules:
     - God tier controls all normal ranks.
-    - Higher rank classes control lower rank classes.
+    - Higher rank classes control lower rank classes before numeric level is checked.
     - Same rank class requires level 10 for full control.
     - Lower rank classes cannot control higher rank classes.
     """
@@ -92,7 +95,7 @@ def can_control_rank(user_rank, target_rank):
 
 
 def print_access_examples():
-    """Prints example access checks."""
+    """Prints example access checks for the current class-first rank logic."""
     examples = [
         ("A10", "A1"),
         ("A10", "B1"),

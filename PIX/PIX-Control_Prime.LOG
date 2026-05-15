@@ -1,4 +1,4 @@
-WorldCore cleanup batch.
+WorldCore memory-to-module mapping pass.
 
 Repo:
 skilling565611/WorldCore
@@ -7,170 +7,110 @@ Branch:
 Dev
 
 Global rules:
+
 - Do not push unless explicitly told.
 - Do not delete real content.
 - Do not invent new systems.
-- Do not rename/move files unless explicitly told.
+- Do not rename or move files unless explicitly told.
 - Do not add secrets, passwords, tokens, key files, KeePass vaults, recovery codes, or private credentials.
-- Return final report and changed files list only.
+- Preserve existing Dev comments.
+- Keep all Python files compatible with the WorldCore Control Hub.
+- Do not change behavior unless explicitly told.
+- Return final report only unless a file is explicitly requested.
 
-TASK 1: KeepPass dark mode polish.
-Target:
-KeepPass/App/keepass_helper.py
+Main control hub:
+Interface/worldcore_hub.py
 
-Rules:
-- Do not change behavior, file paths, buttons, vault copy logic, logging logic, or root detection.
-- Only update tkinter styling.
-- Use dark background, dark panels, light text, readable entry fields, readable buttons, yellow/gold warning bar, blue status bar.
-- Keep same layout.
-- Keep tkinter only.
-- No external dependencies.
-- Keep Dev 1 -> Dev 2 -> Dev 3 comments.
+Hub rule:
+The WorldCore Control Hub is the main control point.
+Option 15 is the main full module smoke test / Test All Modules check.
+If any Python file is changed in a later task, option 15 must still pass.
 
-TASK 2: Organize Vixella character file.
-Target:
-AI/Characters/Vixella_Rosepaw.npc
+Current task type:
+Mapping and review only.
+Do not edit files for this pass unless explicitly required.
+Do not create new files for this pass unless explicitly told.
 
 Main job:
-Put existing pieces into the correct order like a puzzle.
+Compare the known/planned WorldCore systems against the existing repo modules and report what already exists, what is partially represented, and what is missing or should become future TODO work.
 
-Rules:
-- Keep one main .npc file.
-- Do not rewrite Vixella personality.
-- Do not change Custom JavaScript behavior.
-- Remove duplicated helper chatter.
-- Keep all useful content.
-- Mark unfinished items as [AI_FILL_LATER].
-- Rename Music_Asset_System to Sound_Asset_System if needed.
+Known WorldCore planning details:
 
-Organize:
-- Perchance fields
-- character fields
-- image links
-- sound/audio links
-- SUNO prompt
-- sound asset system
-- image asset system
-- character status system
-- raw notes
-- safety rules
+- WorldCore is the external control hub for the user's inner world / CyberPulse Inner World.
+- The repo is the external skeleton for systems that already exist in the user's head and planning history.
+- Existing systems should be organized and mapped, not reinvented.
+- Real-life places can act as anchor zones for WorldCore locations.
+- The Mystery Man is the main long-running hostile force.
+- Mystery Man clones exist and can trigger soft reset/progress reset behavior.
+- Bases, zones, cameras, shields, power nodes, transport, threats, events, saves, characters, AI layers, and ownership/servitude systems are all part of the WorldCore structure.
+- The Bag is planned as a mobile main control unit.
+- Bag Police Mode can scan/capture Mystery Man clones and transfer them to main base prison systems.
+- The Black Hole Shield is the highest single shield and can push out unknown, unauthorized, or Mystery Man-tagged entities.
+- All major shields combined can form a God-Level Shield.
+- The rank/access system is intentional:
+  - A1 through A10
+  - B1 through B10
+  - continuing through Z1 through Z10
+  - Level 10 is the highest number inside one letter before the next letter rank.
+  - B1 outranks A10.
+  - Z10 is the highest normal alphabet rank.
+  - God-tier ranks exist above Z10.
+  - The user/operator is God-tier inside WorldCore.
+  - Higher divine authority layers may exist above normal God-tier in lore.
+  - Lower ranks cannot control higher ranks unless special permission is granted by higher command/God-tier authority.
+- Do not treat B1 controlling A10 as a bug.
 
-URL rule:
-When a Perchance field contains an uploaded URL, add a simple Local path line below it.
-Use:
-Online =
-Local =
-Do not remove the original URL.
+Areas to map:
 
-Pipe rule:
-If a field uses |, treat it as a connected sub-field.
-Example:
-[General_Writing_Instructions]
-Perchance_Field = 🪶 General writing instructions.
-Sub_Field = 🪶 Define your custom writing:
-Content = existing content
+- Core/
+- Systems/
+- Security/
+- Interface/
+- Tests/
+- Tools/
+- KeepPass/
+- AI/Characters/
+- AI/IMG/ or image-related areas if present
+- PIX/log areas if relevant
 
-Vixella image rule:
-Only connect an image to Vixella Rosepaw if:
-- filename includes Vixella
-- folder is AI/IMG/Vixella Rosepaw/
-- .npc/.json references the image URL
-- user explicitly says it belongs to Vixella
+Specific mapping targets:
 
-Otherwise, list it as [Unsorted_Character_Image_Asset].
+- ranks/access
+- shields
+- Bag / Police Mode
+- bases
+- zones
+- cameras
+- teams
+- characters
+- AI/perchance character systems
+- image/audio asset systems
+- Mystery Man / clones
+- power systems
+- transport
+- prison systems
+- events
+- save/load
+- startup/registry
+- real-life anchor zones
+- God-tier hierarchy
+- safety/security rules
+- KeepPass helper boundaries
 
-TASK 3: AI character area.
-Create these paths if missing:
-AI/Characters/Character_Index.txt
-AI/Characters/Character_Template.txt
-AI/Characters/Character_Files/.keep
+Report format:
 
-Do not modify unrelated files.
+1. Existing module coverage
+2. Partially represented systems
+3. Missing planned systems
+4. Files that likely need future cleanup
+5. Files that should not be touched without explicit permission
+6. Recommended next queue tasks
+7. Verification suggestions
 
-Character_Index.txt:
-[Character_Index]
-
-[Folder]
-Root = AI/Characters/
-Character_Files = AI/Characters/Character_Files/
-
-[Characters]
-Total = 0
-
-[Character_List]
-
-Character_Files/.keep:
-This folder stores individual character file sets.
-
-Each character may use:
-- CharacterName_Core.txt
-- CharacterName_Driver.txt
-- CharacterName_Notes.txt
-
-TASK 4: Image asset classification rules.
-Some images came from the user's phone, Perchance AI Character Chat, or related generators.
-
-Do not delete them.
-Do not rename them unless explicitly told.
-Do not move them unless explicitly told.
-Do not assume every image belongs to Vixella.
-Do not assume every image is safe/general-use.
-Some images may be NSFW or mature character references.
-
-Known possible character groups:
-- Vixella Rosepaw
-- Judy Hopps
-- Kiara
-- Loona
-- Mina Velvet
-- Nyra Vale
-- SiennaVale
-- Omniversal Renderer
-- Other future WorldCore characters
-
-Classify images into:
-
-[Character_Image_Asset]
-- generated character art
-- avatar images
-- Perchance character images
-- images referenced by .npc/.json files
-- images stored in AI/IMG/[Character Name]/
-
-[Work_Evidence_Screenshot]
-- VS Code screenshots
-- Codex screenshots
-- Perchance upload screen screenshots
-- phone download screenshots
-- browser screenshots
-- workflow proof images
-- app UI screenshots
-
-If unsure:
-Type = [AI_FILL_LATER]
-Use = Needs user review
-TASK 5: Perchance AI Artist image source rule.
-
-Some WorldCore images were generated inside Perchance AI Character Chat using an AI artist character.
-
-The image artist uses this format:
-<image>description of image</image>
-
-Do not remove these prompts if they appear in logs, JSON exports, or raw notes.
-Treat them as image-generation source prompts.
-
-Classify these as:
-[Perchance_AI_Artist_Image_Source]
-
-Fields:
-Source = Perchance AI Character Chat
-Generator_Type = AI artist character
-Generation_Format = <image>...</image>
-Prompt_Text = existing prompt if available
-Generated_Image_File = [AI_FILL_LATER]
-Character_Link = [AI_FILL_LATER]
-
-If the generated image clearly belongs to a character, connect it to that character's Image_Asset_System.
-If unclear, list it under [Unsorted_Character_Image_Asset].
-
-Do not delete, rename, or move generated images unless explicitly told.
+Important:
+This pass is for understanding and mapping only.
+Do not rewrite code.
+Do not reorganize files.
+Do not create a new pipeline.
+Do not add placeholder systems.
+Do not push.

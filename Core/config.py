@@ -5,6 +5,8 @@ config = {
     "project_name": "WorldCore",
     "version": "0.1",
     "mode": "lightweight_cli",
+    # Save settings are kept here for shared reference.
+    # TODO: Align Systems/save_system.py to these values when path behavior is ready to change.
     "data_folder": "Data",
     "save_file": "world_state.json",
     "backup_file": "world_state_backup.json"

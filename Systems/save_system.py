@@ -9,6 +9,9 @@ import os
 SAVE_FILE = "world_state.json"
 BACKUP_FILE = "world_state_backup.json"
 
+# Current behavior saves beside the active working directory.
+# TODO: Align this with Core/config.py's Data folder after confirming the desired save location.
+
 
 def save_state(data):
     """
